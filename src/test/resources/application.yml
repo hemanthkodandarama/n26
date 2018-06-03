@@ -1,0 +1,16 @@
+txn:
+  age-limit-millis:
+    save: 60000
+    stats: 3000
+# a discount when trying to save too risky and old transactions. normally 1 or even 0 works,
+# but by adding more interceptors or lines of codes before the real validation or depending on host machine,
+# a bigger number is needed.
+# It's exactly like increasing the ${age-limit.save-millis} property value, but more clear
+  timestamp-discount-for-save-millis: 0
+  delay-millis:
+    save: 0
+    stats: 0
+
+logging.level:
+    com.bobby.n26: DEBUG
+
