@@ -24,9 +24,9 @@ with request body:
 ```
 The body must not be null and should have timestamp, otherwise a `400` HTTP error will be returned.
 
-Remove all transactions from storage by `POST` method with no request body (sometimes needed when testing. up to you):
+Remove all transactions from storage by `DELETE` method (sometimes needed when testing. up to you):
 ```
-/transactions/clear
+/transactions
 ```
 
 View statistics by `GET` method:

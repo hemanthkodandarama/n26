@@ -50,9 +50,9 @@ public class TransactionController {
         return ResponseEntity.ok().body(stats);
     }
 
-    @RequestMapping(path = "/transactions/clear", method = RequestMethod.POST)
-    public void reset(){
-        log.info("Reset has been requested by user");
+    @RequestMapping(path = "/transactions", method = RequestMethod.DELETE)
+    public void clearAllTransactions(){
+        log.info("Delete all transactions has been requested by user");
         service.reset();
     }
 
